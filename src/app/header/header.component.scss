@@ -1,0 +1,48 @@
+@use "../../styles.scss";
+
+header {
+	display: flex;
+	width: 80%;
+	margin: auto;
+	align-items: center;
+
+	h1 {
+		margin: 0 4rem 0 0;
+		line-height: 1;
+	}
+
+	img {
+		display: block;
+	}
+
+	nav {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			display: flex;
+			margin: block;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		font-weight: bold;
+		color: styles.$grayishViolet;
+	}
+
+	a:active, a:hover {
+		color: styles.$darkViolet;
+	}
+
+	li {
+		margin-right: 3rem;
+	}
+
+	li:last-child {
+		margin-right: 0; 
+	}
+}

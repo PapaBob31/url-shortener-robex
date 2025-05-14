@@ -1,0 +1,29 @@
+@use "../../styles.scss";
+
+section {
+	display: flex;
+	justify-content: space-between;
+	padding: 100px 0 100px 10%;
+	align-items: center;
+
+	h1 {
+		font-size: 6rem;
+		line-height: 1;
+		margin: 0;
+	}
+
+	p {
+		font-size: 1.2rem;
+		color: styles.$gray;
+	}
+
+	button {
+		padding: 10px 20px;
+		background-color: styles.$cyan;
+		color: white;
+		font-size: 1.2rem;
+		font-weight: bold;
+		border-width: 0;
+		border-radius: 15px;
+	}
+}

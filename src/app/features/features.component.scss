@@ -1,0 +1,13 @@
+@use "../../styles.scss";
+
+section {
+	padding: 100px 0 100px 10%;
+	background-color: styles.$grayishViolet;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+}
