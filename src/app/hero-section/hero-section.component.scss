@@ -50,11 +50,12 @@ img {
 	img {
 		order: 0;
 		width: 100%;
+    padding-left: 5%;
 	}
 
 	div {
 		order: 1;
 		padding: 5%;
-		width: 100%;
+    width: unset;
 	}
 }
