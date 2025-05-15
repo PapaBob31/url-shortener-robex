@@ -25,6 +25,8 @@ input {
 	margin-right: 10px;
 	padding: 10px;
   background-color: white;
+  border-width: 0;
+  border-radius: 10px;
 }
 
 button {
@@ -33,6 +35,10 @@ button {
   background-color: styles.$cyan;
   border-width: 0;
   border-radius: 10px;
+}
+
+button:hover {
+  background-color: styles.$lightCyan;
 }
 
 input.error {
@@ -53,7 +59,7 @@ input.error {
 
 	input {
 		display: block;
-    width: 100%;
+    width: 90%;
     margin-right: 0;
     margin-bottom: 10px;
     flex-grow:0;
