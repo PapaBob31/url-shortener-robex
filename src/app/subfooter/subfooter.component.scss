@@ -1,7 +1,36 @@
-section {
-		padding: 40px 10%;
+@use "../../styles.scss";
 
-		h2 {
-			margin-bottom: 20px;
-		}
+section {
+	padding: 50px 10%;
+	background-color: styles.$darkViolet;
+	background-image: url('/assets/bg-boost-desktop.svg');
+	background-position: center;
+	background-size: cover;
+}
+
+h2 {
+	margin-bottom: 20px;
+	color: white;
+	font-size: 2.5rem;
+	text-align: center;
+	font-weight: 700;
+}
+
+button {
+	display: block;
+	width: 10rem;
+	padding: 15px 25px;
+	color: white;
+	margin: auto;
+	background-color: styles.$cyan;
+	border-radius: 30px;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+@media screen and (max-width: 750px) {
+	h2 {
+		font-size: 2rem;
+	}
 }

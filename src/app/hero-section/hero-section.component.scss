@@ -7,7 +7,7 @@ section {
 	align-items: center;
 
 	h1 {
-		font-size: 6rem;
+		font-size: 6vw;
 		line-height: 1;
 		margin: 0;
 	}
@@ -25,5 +25,36 @@ section {
 		font-weight: bold;
 		border-width: 0;
 		border-radius: 15px;
+	}
+}
+
+div {
+	width: 45%;
+	
+}
+
+img {
+	width: 45%;
+	display: block;
+}
+
+@media screen and (max-width: 750px) {
+	section {
+		flex-direction: column;	
+		justify-content: flex-start;
+		padding: 0;
+		text-align: center;
+
+	}
+
+	img {
+		order: 0;
+		width: 100%;
+	}
+
+	div {
+		order: 1;
+		padding: 5%;
+		width: 100%;
 	}
 }

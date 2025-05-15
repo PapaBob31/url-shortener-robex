@@ -1,0 +1,56 @@
+@use '../../styles.scss';
+
+section {
+	width: 80%;
+	position: relative;
+	top: -50px;
+	margin: auto;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	padding: 0 30px;
+	background-color: styles.$darkViolet;
+	background-image: url('/assets/bg-shorten-desktop.svg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+}
+
+input {
+	flex-grow: 1;
+	margin-right: 10px;
+	padding: 10px;
+}
+
+button {
+	padding: 10px 20px;
+}
+
+input.error {
+	outline: 2px solid red;
+}
+
+@media screen and (max-width: 750px) {
+	section {
+		width: 90%;
+	}
+
+	form {
+		width: unset;
+		display: block;
+		background-image: url('/assets/bg-shorten-mobile.svg');
+		padding: 20px;
+	}
+
+	input {
+		display: block;
+	}
+
+	button {
+		display: block;
+	}	
+}

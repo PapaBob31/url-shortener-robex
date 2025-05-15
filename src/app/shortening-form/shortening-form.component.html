@@ -1,6 +1,9 @@
 <section>
-  <form>
-    <input type="text" name="link" placeholder="Shorten a link here..."/>
+  <form [formGroup]="urlForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="url" placeholder="Shorten a link here..." [class.error]="inputError"/>
     <button type="submit">Shorten It!</button>
   </form>
+  @for (result of shortenedResults; track result.newUrl) {
+    <div>{{result.originalUrl}} {{result.newUrl}}</div>
+  }
 </section>

@@ -2,7 +2,7 @@
 
 section {
 	display: flex;
-	padding: 100px 0 100px 10%;
+	padding: 100px 10%;
 	justify-content: space-between;
 	background-color: styles.$veryDarkViolet;
 	color: white;
@@ -12,11 +12,69 @@ section {
 		margin: 0;
 		padding: 0;
 	}
+}
+
+#section-header {
+	font-size: 2.5rem;
+}
+
+div {
+	h2 {
+		margin-bottom: 30px;
+		font-weight: 700;
+	}
+
+	li {
+		margin-bottom: 20px;
+		color: styles.$grayishViolet;
+		font-weight: 600;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	a:hover {
+		color: styles.$cyan;
+	}
+}
+
+#social-links {
+	display: flex;
+	min-width: 12rem;
+	justify-content: space-between;
 
 	a {
 		display: block;
-		img {
-			width: 2rem;
+		svg {
+			width: 1.8rem;
 		}
+	}
+
+	a:hover, a:active {
+		path {
+			fill: styles.$cyan;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	section {
+		padding: 50px 10%;
+		display: block;
+
+		* {
+			text-align: center
+		}
+	}
+
+	#section-header, div {
+		margin-bottom: 50px;
+	}
+
+	#social-links {
+		width: 90%;
+		margin: auto;
 	}
 }
