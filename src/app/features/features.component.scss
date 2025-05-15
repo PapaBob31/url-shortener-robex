@@ -16,6 +16,10 @@ section {
 		line-height: 2;
 		margin: 0 auto 80px;
 	}
+
+  p {
+    color: styles.$gray;
+  }
 }
 
 ul {
