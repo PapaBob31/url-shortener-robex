@@ -9,12 +9,13 @@ section {
 	h1 {
 		font-size: 6vw;
 		line-height: 1;
-		margin: 0;
+		margin: 20px 0;
 	}
 
 	p {
 		font-size: 1.2rem;
 		color: styles.$gray;
+    margin-bottom: 30px;
 	}
 
 	button {
@@ -24,13 +25,12 @@ section {
 		font-size: 1.2rem;
 		font-weight: bold;
 		border-width: 0;
-		border-radius: 15px;
+		border-radius: 10px;
 	}
 }
 
 div {
 	width: 45%;
-	
 }
 
 img {
@@ -42,14 +42,14 @@ img {
 	section {
 		flex-direction: column;	
 		justify-content: flex-start;
-		padding: 0;
+		padding: 0 0 100px;
 		text-align: center;
-
+    overflow-x: hidden;
 	}
 
 	img {
 		order: 0;
-		width: unset;
+		width: 95%;
     margin-left: 5%;
 	}
 
@@ -58,4 +58,8 @@ img {
 		padding: 5%;
     width: unset;
 	}
+  
+  h1 {
+    font-size: 2rem;
+  }
 }
