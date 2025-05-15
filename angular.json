@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "url-shortener-weeek-3": {
+    "url-shortener-week-3": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/url-shortener-weeek-3",
+            "outputPath": "dist/url-shortener-week-3",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "url-shortener-weeek-3:build:production"
+              "buildTarget": "url-shortener-week-3:build:production"
             },
             "development": {
-              "buildTarget": "url-shortener-weeek-3:build:development"
+              "buildTarget": "url-shortener-week-3:build:development"
             }
           },
           "defaultConfiguration": "development"
