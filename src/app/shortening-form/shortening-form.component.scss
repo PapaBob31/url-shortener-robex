@@ -28,10 +28,12 @@ input {
 
 button {
 	padding: 10px 20px;
+  font-weight: bold;
+  background-color: styles.$cyan;
 }
 
 input.error {
-	outline: 2px solid red;
+	outline: 2px solid styles.$red;
 }
 
 @media screen and (max-width: 750px) {
@@ -48,9 +50,14 @@ input.error {
 
 	input {
 		display: block;
+    width: 100%;
+    margin-right: 0:
+    margin-bottom: 10px;
 	}
 
 	button {
 		display: block;
+    background-color: styles.$cyan;
+    width: 100%;
 	}	
 }
