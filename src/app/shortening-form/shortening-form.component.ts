@@ -26,14 +26,14 @@ export class ShorteningFormComponent {
     })
   }
 
-  onSubmit() {
+  onSubmit(event: FormDataEvent) {
+    event.preventDefault();
     if (!this.urlForm.value.url || !this.urlForm.value.url.trim()){
       this.inputError = true
       return
     }
-    const corsProxyUrl = ''
-    const resourceUrl = `https://crossorigin.me/https://cleanuri.com/api/v1/shorten/?url=${encodeURIComponent(this.urlForm.value.url)}`
-    this.http.post<{"result_url": string; "error": string}>(resourceUrl, {}).subscribe(response => {
+    // const resourceUrl = `https://crossorigin.me/https://cleanuri.com/api/v1/shorten/?url=${encodeURIComponent(this.urlForm.value.url)}`
+    this.http.post<{"result_url": string; "error": string}>('https://spoo.me/', 'string', {params: {url: this.urlForm.value.url}}).subscribe(response => {
       console.log(response)
     })
 
