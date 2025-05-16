@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component"
 import { HeroSectionComponent } from "./hero-section/hero-section.component"
 import { ShorteningFormComponent } from "./shortening-form/shortening-form.component"
@@ -9,7 +8,7 @@ import { FooterComponent } from "./footer/footer.component"
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, HeroSectionComponent, ShorteningFormComponent, FeaturesComponent, SubfooterComponent, FooterComponent],
+  imports: [HeaderComponent, HeroSectionComponent, ShorteningFormComponent, FeaturesComponent, SubfooterComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -18,19 +18,27 @@ h2 {
 
 button {
 	display: block;
-	width: 10rem;
-	padding: 15px 25px;
+	padding: 15px 40px;
 	color: white;
 	margin: auto;
 	background-color: styles.$cyan;
-	border-radius: 30px;
+	border-radius: 50px;
 	border-width: 0;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+button:hover, button:active {
+	background-color: styles.$lightCyan;
 }
 
 @media screen and (max-width: 750px) {
+	section {
+		background-image: url('/assets/bg-boost-desktop.svg');
+	}
+	
 	h2 {
-		font-size: 2rem;
+		font-size: 1.6rem;
 	}
 }

@@ -1,9 +1,22 @@
 <section>
   <form [formGroup]="urlForm" (ngSubmit)="onSubmit($event)">
     <input type="text" formControlName="url" placeholder="Shorten a link here..." [class.error]="inputError"/>
+    @if (inputError) {
+      <p id="error-msg">Please add a link</p>
+    }
     <button type="submit">Shorten It!</button>
   </form>
-  @for (result of shortenedResults; track result.newUrl) {
-    <div>{{result.originalUrl}} {{result.newUrl}}</div>
+  @if (shortenedResults.length > 0) {
+    <ul>
+      @for (result of shortenedResults; track result.newUrl) {
+        <li class="result">
+          <div class="original-url">{{result.originalUrl}}</div>
+          <div>
+            <div class="short-url">{{result.newUrl}}</div>
+            <button>Copy</button>
+          </div>
+        </li>
+      }
+    </ul>
   }
 </section>

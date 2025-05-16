@@ -1,8 +1,8 @@
 <header>
   <h1>
-    <img src="/assets/logo.svg" alt="Shortly logo"/>
+    <img src="/assets/logo.svg" alt="Shortly logo" id="site-logo"/>
   </h1>
-  <nav>
+  <nav [class.visible]="menuVisible">
     <ul>
       <li><a href="">Features</a></li>
       <li><a href="">Pricing</a></li>
@@ -10,7 +10,8 @@
     </ul>
     <ul>
       <li><a href="">Login</a></li>
-      <li><a href="">Sign Up</a></li>
+      <li><a href="" id="sign-up-btn">Sign Up</a></li>
     </ul>
   </nav>
+  <button id="menu-btn" (click)="toggleMenuVisibility($event)"><img src="/assets/icon-hamburger.svg" alt="Menu icon"></button>
 </header>

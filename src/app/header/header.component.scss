@@ -2,19 +2,31 @@
 
 header {
 	display: flex;
-	width: 80%;
+	width: 75%;
 	margin: auto;
 	align-items: center;
-	padding: 40px 0;
+	padding: 50px 0 40px;
 
 	h1 {
 		margin: 0 4rem 0 0;
 		line-height: 1;
 	}
 
-	img {
-		display: block;
+	button {
+		display: none;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		img {
+			width: 2.5rem;
+			display: block;
+		}
 	}
+}
+
+#site-logo {
+	display: block;
 }
 
 nav {
@@ -48,26 +60,56 @@ nav {
 	}
 }
 
+#sign-up-btn {
+	padding: 15px 20px;
+	font-weight: bold;
+	background-color: styles.$cyan;
+	border-width: 0;
+	border-radius: 30px;
+	color: white;
+	cursor: pointer;
+	margin-left: 20px;
+}
+
+#sign-up-btn:hover, #sign-up-btn:active {
+	background-color: styles.$lightCyan;
+}
+
 
 @media screen and (max-width: 750px) {
 	header {
 		position: relative;
 		width: 90%;
+		justify-content: space-between;
+		padding: 40px 0 20px;
+
+		button {
+			display: block;
+		}
 	}
 	nav {
+		display: none;
+		z-index: 100;
 		position: absolute;
 		top: 100%;
 		left: 0;
 		right: 0;
 		background-color: styles.$darkViolet;
-		display: block;
-		padding: 25px 25px 0;
+		padding: 40px 25px 15px;
 		border-radius: 10px;
-		display: none;
 		
 
 		ul {
 			display: block;
+		}
+
+		ul:first-child {
+			// padding-bottom: 20px;
+		}
+
+		ul:last-child {
+			border-top: 1px solid hsl(257, 7%, 35%);
+			padding-top: 25px;
 		}
 
 		li {
@@ -79,6 +121,16 @@ nav {
 
 		a {
 			color: white;
+			font-size: 1.2rem;
 		}
+	}
+
+	#sign-up-btn {
+		display: block;
+		margin: 0;
+	}
+
+	nav.visible {
+		display: block;
 	}
 }

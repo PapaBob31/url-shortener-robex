@@ -1,73 +1,178 @@
 @use '../../styles.scss';
 
 section {
-	width: 80%;
+	width: 75%;
 	position: relative;
-	top: -50px;
+	top: -80px;
 	margin: auto;
 }
 
 form {
 	display: flex;
 	align-items: center;
-	width: 100%;
 	height: 100px;
-	padding: 0 30px;
+	padding: 40px 60px;
 	background-color: styles.$darkViolet;
 	background-image: url('/assets/bg-shorten-desktop.svg');
 	background-position: center;
 	background-size: cover;
 	border-radius: 10px;
+
+	input {
+		flex-grow: 1;
+		margin-right: 25px;
+		padding: 15px;
+		background-color: white;
+		border-width: 0;
+		font-size: 1.4rem;
+		border-radius: 10px;
+		outline: none;
+	}
+
+	button {
+		padding: 15px 40px;
+		font-weight: bold;
+		background-color: styles.$cyan;
+		border-width: 0;
+		font-size: 1.4rem;
+		border-radius: 10px;
+		color: white;
+		cursor: pointer;
+	}
+
+	button:hover, button:active {
+	  background-color: styles.$lightCyan;
+	}
+
+	input.error {
+		outline: 3px solid styles.$red;
+	}
+
+	input.error::placeholder {
+		color: styles.$red;
+		opacity: 50%;
+	}
 }
 
-input {
-	flex-grow: 1;
-	margin-right: 10px;
-	padding: 10px;
-  background-color: white;
-  border-width: 0;
-  border-radius: 10px;
+
+#error-msg {
+	position: absolute;
+	bottom: 20px;
+	left: 60px;
+	color: styles.$red;
+	font-style: italic;
 }
 
-button {
-	padding: 10px 20px;
-  font-weight: bold;
-  background-color: styles.$cyan;
-  border-width: 0;
-  border-radius: 10px;
+.result {
+	display: flex;
+	border-radius: 10px;
+	padding: 15px 25px;
+	justify-content: space-between;
+	background-color: white;
+	margin-top: 20px;
+	align-items: center;
+
+	div:nth-child(2) {
+		display: flex;
+		align-items: center;
+	}
+
+	button {
+		padding: 10px 30px;
+		font-weight: bold;
+		background-color: styles.$cyan;
+		border-width: 0;
+		border-radius: 10px;
+		color: white;
+		cursor: pointer;
+		margin-left: 20px;
+	}
+	
+	button.copied {
+		background-color: styles.$veryDarkBlue;
+	}
+
+	button:hover, button:active {
+	  background-color: styles.$lightCyan;
+	}
 }
 
-button:hover {
-  background-color: styles.$lightCyan;
+.original-url {
+	font-size: 1.4rem;
+	color: styles.$darkViolet;
+	font-weight: 500;
 }
 
-input.error {
-	outline: 2px solid styles.$red;
+.short-url {
+	font-size: 1.4rem;
+	color: styles.$cyan;
+	font-weight: 500;
 }
 
 @media screen and (max-width: 750px) {
 	section {
 		width: 90%;
+		top: -90px;
 	}
 
 	form {
 		width: unset;
 		display: block;
 		background-image: url('/assets/bg-shorten-mobile.svg');
-		padding: 20px;
+		padding: 25px;
+		min-height: 120px;
+		height: fit-content;
+
+		input {
+			display: block;
+		    width: 90%;
+		    margin-right: 0;
+		    margin-bottom: 10px;
+		    flex-grow:0;
+			border-radius: 5px;
+		}
+
+		button {
+			display: block;
+		    background-color: styles.$cyan;
+		    width: 100%;
+			border-radius: 5px;
+		}	
 	}
 
-	input {
-		display: block;
-    width: 90%;
-    margin-right: 0;
-    margin-bottom: 10px;
-    flex-grow:0;
+	#error-msg {
+		position: static;
+		color: styles.$red;
+		font-style: italic;
+		margin-bottom: 20px;
 	}
 
-	button {
+	.result {
 		display: block;
-    background-color: styles.$cyan;
-    width: 100%;
-	}	
+		border-radius: 10px;
+		padding: 0;
+
+		& > div {
+			padding: 20px;
+		}
+
+		div:nth-child(2) {
+			display: block;
+			border-top: 1px solid styles.$gray;
+		}
+
+		button {
+			display: block;
+			padding: 10px 30px;
+			background-color: styles.$cyan;
+			border-radius: 5px;
+			color: white;
+			cursor: pointer;
+			margin-left: 0;
+			width: 100%;
+			margin-top: 20px;
+		}
+		
+	}
+	
 }
