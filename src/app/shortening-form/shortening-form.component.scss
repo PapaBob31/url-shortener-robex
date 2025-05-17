@@ -180,5 +180,17 @@ form {
 		}
 		
 	}
-	
+
+
+	.original-url {
+		font-size: 1rem;
+		color: styles.$darkViolet;
+		font-weight: 500;
+	}
+
+	.short-url {
+		font-size: 1rem;
+		color: styles.$cyan;
+		font-weight: 500;
+	}
 }
