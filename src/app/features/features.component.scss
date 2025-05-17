@@ -34,6 +34,7 @@ ul {
 	padding: 0;
 	display: flex;
 	position: relative;
+	align-items: flex-start;
 }
 
 li {
@@ -87,7 +88,7 @@ li:last-child {
 	}
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
 	section{
 		padding: 10px 0 40px;
 		width: 90%;
@@ -117,6 +118,7 @@ li:last-child {
 	li {
 		margin-right: 0;
 		margin-bottom: 50px;
+		padding: 60px 30px 40px;
 		text-align: center;
 	}
 
@@ -138,7 +140,7 @@ li:last-child {
 		background-color: styles.$darkViolet;
 		position: absolute;
 		top: -30px;
-		left: 40%;
+		left: 45%;
 		border-radius: 100%;
 
 		img {
@@ -154,5 +156,9 @@ li:last-child {
 			width: unset;
 			min-width: unset;
 		}
+	}
+
+	.feature-icon {
+		left: 42%;
 	}
 }
