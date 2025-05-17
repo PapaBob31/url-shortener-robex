@@ -1,6 +1,28 @@
-# Url Shortener Week3
+# Url Shortener
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+This is a solution to Robex tech tribe Angular cohort Week 3 Challenge. 
+
+## Overview
+
+The main feature of the site is the url shortening service. You input a url and It 
+displays a shorter url that points to the same resource as the original url
+
+The site is responsive and also includes
+- A button that automatically copies a shortened url when clicked
+- Url validation that's inbuilt into the form
+
+
+Visit the [site](https://url-shortener-robex.vercel.app/) to explore it's full capabilities
+
+### What I learned
+I learnt about angular forms, it's various methods, attributes and how it can make managing html form state easier. 
+It was also what I used to build the site's form as well as all it's data validation, state management e.t.c
+I also learnt how to make http requests with angular's `HttpClient`. The `HttpClient` was used to make the external
+requests to the api that was responsible for shortening the links
+
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10. 
+The project was also styled using [SCSS](https://sass-lang.com/)
 
 ## Development server
 
@@ -12,20 +34,6 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
 ## Building
 
 To build the project run:
@@ -34,26 +42,11 @@ To build the project run:
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This will compile the project and store the build artifacts in the `dist/` directory
 
-## Running unit tests
+### Links
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- GitHuub URL: [https://github.com/PapaBob31/Week-2-Challenge](https://github.com/PapaBob31/url-shortener-robex)
+- Live Site URL: [https://week-2-challenge-iota.vercel.app/](https://url-shortener-robex.vercel.app/)
 
-```bash
-ng test
-```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
