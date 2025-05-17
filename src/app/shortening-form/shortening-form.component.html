@@ -1,8 +1,8 @@
 <section>
   <form [formGroup]="urlForm" (ngSubmit)="onSubmit($event)">
-    <input type="text" formControlName="url" placeholder="Shorten a link here..." [class.error]="inputError"/>
-    @if (inputError) {
-      <p id="error-msg">Please add a link</p>
+    <input type="text" formControlName="url" placeholder="Shorten a link here..." [class.error]="errorOccured"/>
+    @if (errorOccured) {
+      <p id="error-msg">{{ errorMsg }}</p>
     }
     <button type="submit">Shorten It!</button>
   </form>
@@ -10,10 +10,16 @@
     <ul>
       @for (result of shortenedResults; track result.newUrl) {
         <li class="result">
-          <div class="original-url">{{result.originalUrl}}</div>
+          <div class="original-url" title="{{result.originalUrl}}">{{result.originalUrl}}</div>
           <div>
             <div class="short-url">{{result.newUrl}}</div>
-            <button>Copy</button>
+            <button (click)="copyLink($event)" id="{{ result.newUrl }}" [class.copied]="result.copied" [disabled]="result.copied">
+              @if (result.copied) {
+                Copied!
+              }@else {
+                Copy
+              }
+            </button>
           </div>
         </li>
       }

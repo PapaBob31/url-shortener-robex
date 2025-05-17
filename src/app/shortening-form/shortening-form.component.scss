@@ -9,8 +9,9 @@ section {
 
 form {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	height: 100px;
+	min-height: 100px;
 	padding: 40px 60px;
 	background-color: styles.$darkViolet;
 	background-image: url('/assets/bg-shorten-desktop.svg');
@@ -38,10 +39,17 @@ form {
 		border-radius: 10px;
 		color: white;
 		cursor: pointer;
+		display: block;
+		margin-top: 10px;
 	}
 
 	button:hover, button:active {
 	  background-color: styles.$lightCyan;
+	}
+
+	li button.copied, li button.copied:hover {
+		background-color: styles.$veryDarkBlue;
+	  	cursor: auto;
 	}
 
 	input.error {
@@ -98,18 +106,18 @@ form {
 }
 
 .original-url {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	color: styles.$darkViolet;
 	font-weight: 500;
 }
 
 .short-url {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	color: styles.$cyan;
 	font-weight: 500;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
 	section {
 		width: 90%;
 		top: -90px;
@@ -124,17 +132,15 @@ form {
 		height: fit-content;
 
 		input {
+			width: 100%;
 			display: block;
-		    width: 90%;
 		    margin-right: 0;
 		    margin-bottom: 10px;
-		    flex-grow:0;
 			border-radius: 5px;
 		}
 
 		button {
 			display: block;
-		    background-color: styles.$cyan;
 		    width: 100%;
 			border-radius: 5px;
 		}	
