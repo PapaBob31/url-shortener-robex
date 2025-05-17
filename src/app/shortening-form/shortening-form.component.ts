@@ -20,23 +20,34 @@ export class ShorteningFormComponent {
 
   constructor() {
     this.urlForm.valueChanges.subscribe(changes => {
-      if (changes.url && changes.url.trim()) {
-        this.inputError = false;
+      if (changes.url && changes.url.trim()) { // text input present and it's not whitespace
+        this.inputError = false; // hides the input error if it was previously displayed
       }
     })
   }
 
   onSubmit(event: FormDataEvent) {
     event.preventDefault();
-    if (!this.urlForm.value.url || !this.urlForm.value.url.trim()){
-      this.inputError = true
+
+    if (!this.urlForm.value.url || !this.urlForm.value.url.trim()){ // no text input or it's just whitespace
+      this.inputError = true // display input error
       return
     }
-    // const resourceUrl = `https://crossorigin.me/https://cleanuri.com/api/v1/shorten/?url=${encodeURIComponent(this.urlForm.value.url)}`
-    this.http.post<{"result_url": string; "error": string}>('https://spoo.me/', 'string', {params: {url: this.urlForm.value.url}}).subscribe(response => {
-      console.log(response)
+
+    const ORIGINAL_URL = this.urlForm.value.url;
+
+    this.http.post<{data: {tiny_url: string}, code: number; errors: string[]}>(
+      "https://api.tinyurl.com/create",
+      {
+        "url": this.urlForm.value.url,
+      },
+      {
+        headers: {'Authorization': `Bearer invalid-key`},
+      }).subscribe(responseBody => {
+        console.log(responseBody.errors)
+        this.shortenedResults.push({originalUrl: ORIGINAL_URL, newUrl: responseBody.data.tiny_url});
     })
 
-    this.shortenedResults.push({originalUrl: this.urlForm.value.url, newUrl: this.urlForm.value.url});
+    
   }
 }
