@@ -44,9 +44,29 @@ ng build
 
 This will compile the project and store the build artifacts in the `dist/` directory
 
+## Converting to Native Android
+The project also uses the capacitor library to generate a native android app with the same features as the website
+
+To generate the android app, first you must build the project using the previously stated instruction
+
+Then, sync the project to install/update the required native dependencies.
+```bash
+npx cap sync
+```
+
+To run a debug build of your capacitor app on an Android device, you can run
+```bash
+npx cap run android
+```
+
+To open your app in android studio or perhaps the `debug build` command above failed, you can run the command below to open your project in [Android Studio](https://developer.android.com/studio). It would also be more effective to build your app in the IDE.
+```bash
+npx cap open android
+```
+
+Capacitor also allows for ios application generation. You can find out more about that in the official [docs](https://capacitorjs.com/docs/basics/workflow)
+
 ### Links
 
 - GitHuub URL: [https://github.com/PapaBob31/Week-2-Challenge](https://github.com/PapaBob31/url-shortener-robex)
 - Live Site URL: [https://week-2-challenge-iota.vercel.app/](https://url-shortener-robex.vercel.app/)
-
-
