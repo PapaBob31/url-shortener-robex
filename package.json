@@ -20,7 +20,9 @@
     "@capacitor/android": "^7.2.0",
     "@capacitor/angular": "^2.0.3",
     "@capacitor/core": "latest",
+    "@capacitor/network": "^7.0.1",
     "@dotenvx/dotenvx": "^1.44.0",
+    "@ionic/cli": "^7.2.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -29,6 +31,7 @@
     "@angular-devkit/build-angular": "^19.2.10",
     "@angular/cli": "^19.2.10",
     "@angular/compiler-cli": "^19.2.0",
+    "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "latest",
     "@ngx-env/builder": "^19.0.4",
     "@types/jasmine": "~5.1.0",

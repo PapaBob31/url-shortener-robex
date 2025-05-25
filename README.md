@@ -47,7 +47,12 @@ This will compile the project and store the build artifacts in the `dist/` direc
 ## Converting to Native Android
 The project also uses the capacitor library to generate a native android app with the same features as the website
 
-To generate the android app, first you must build the project using the previously stated instruction
+To generate the android app, first you must build the project using the previously stated instruction.
+After you've done that, you can then generate the android app using the command below
+
+```bash
+npx cap add android
+```
 
 Then, sync the project to install/update the required native dependencies.
 ```bash
